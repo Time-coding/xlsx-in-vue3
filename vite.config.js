@@ -2,21 +2,25 @@
  * @page: 
  * @Author: Orts
  * @Date: 2021-12-09 09:37:00
- * @LastEditTime: 2021-12-09 17:36:42
+ * @LastEditTime: 2021-12-09 17:42:16
  * @LastEditors: Orts
  * @Description: 
  * @FilePath: /xlsx-in-vue3/vite.config.js
  */
-import { defineConfig } from 'vite'
+import {
+  defineConfig
+} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import {
+  ElementPlusResolver
+} from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(), 
+    vue(),
     AutoImport({
       resolvers: [ElementPlusResolver()],
     }),
@@ -47,10 +51,10 @@ export default defineConfig({
       }],
     },
   },
-  base:"/",
+  base: "./",
   build: {
     outDir: 'docs',
-    chunkSizeWarningLimit:2000,
+    chunkSizeWarningLimit: 2000,
     rollupOptions: {
       output: {
         manualChunks: {
