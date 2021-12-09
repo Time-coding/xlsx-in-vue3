@@ -2,7 +2,7 @@
  * @page: 
  * @Author: Orts
  * @Date: 2021-12-08 12:02:09
- * @LastEditTime: 2021-12-09 17:58:31
+ * @LastEditTime: 2021-12-09 20:39:44
  * @LastEditors: Orts
  * @Description: 
  * @FilePath: /xlsx-in-vue3/src/App.vue
@@ -190,7 +190,7 @@ body {
   left: 0;
   z-index: 999;
 }
-.x-spreadsheet-dropdown {
+.x-spreadsheet-bottombar .x-spreadsheet-dropdown {
   position: static;
 }
 .x-spreadsheet-dropdown.top-left .x-spreadsheet-dropdown-content {
