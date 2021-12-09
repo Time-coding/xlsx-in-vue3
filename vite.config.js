@@ -2,7 +2,7 @@
  * @page: 
  * @Author: Orts
  * @Date: 2021-12-09 09:37:00
- * @LastEditTime: 2021-12-09 17:04:09
+ * @LastEditTime: 2021-12-09 17:32:43
  * @LastEditors: Orts
  * @Description: 
  * @FilePath: /xlsx-in-vue3/vite.config.js
@@ -47,7 +47,9 @@ export default defineConfig({
       }],
     },
   },
+  base:"/docs/",
   build: {
+    outDir: 'docs',
     chunkSizeWarningLimit:2000,
     rollupOptions: {
       output: {
