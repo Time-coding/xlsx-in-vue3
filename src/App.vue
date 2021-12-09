@@ -2,10 +2,10 @@
  * @page: 
  * @Author: Orts
  * @Date: 2021-12-08 12:02:09
- * @LastEditTime: 2021-12-09 13:30:00
+ * @LastEditTime: 2021-12-09 15:54:12
  * @LastEditors: Orts
  * @Description: 
- * @FilePath: /vue/xlsx-in-vue3/src/App.vue
+ * @FilePath: /xlsx-in-vue3/src/App.vue
 -->
 <script setup>
 import { reactive, ref, onMounted } from "vue";
@@ -163,6 +163,9 @@ body {
   margin-top: 10px;
   overflow: hidden;
 }
+
+</style>
+<style lang="less">
 .upload-demo {
   height: 5vh;
   display: flex;
@@ -177,16 +180,11 @@ body {
   flex-wrap: nowrap;
   height: 70px;
   overflow-x: scroll;
-  /* margin-right: 10px; */
 }
 #xel {
   height: 93vh;
   position: relative;
 }
-/* .x-spreadsheet-menu{
-  position: absolute;
-  bottom: 0;
-} */
 .x-spreadsheet-bottombar {
   position: absolute;
   bottom: 0px;
@@ -198,9 +196,6 @@ body {
   position: static;
 }
 .x-spreadsheet-dropdown.top-left .x-spreadsheet-dropdown-content {
-  /* position: fixed;
-  bottom: 70px;
-  left: 40px; */
   left: 100px;
   z-index: 999;
 }
