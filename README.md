@@ -2,7 +2,7 @@
  * @page: 
  * @Author: Orts
  * @Date: 2021-12-09 13:54:32
- * @LastEditTime: 2021-12-09 18:07:24
+ * @LastEditTime: 2021-12-09 19:13:32
  * @LastEditors: Orts
  * @Description: 
  * @FilePath: /xlsx-in-vue3/README.md
@@ -39,3 +39,47 @@ vite+Vue3+element-plus+xlsx+x-data-spreadsheet
   ```
 
 - 代码中有两种Object，一个是workbook是sheet对象，另一种是Spreadsheet是样式渲染对象。workbook实例要想被使用，需要转化成Spreadsheet需要的格式，不能直接使用，`excel.js`提供了stox方法，可以将workbook实例转化成Spreadsheet可加载的数据。
+- 关于Spreadsheet的默认配置
+  ```js
+  const options = {
+    mode: "edit", // edit | read 编辑/只读
+    showToolbar: true,
+    showGrid: true,
+    showContextmenu: true,
+    view: {
+      height: () => document.documentElement.clientHeight,
+      width: () => document.documentElement.clientWidth,
+    },
+    row: {
+      len: 100,
+      height: 25,
+    },
+    col: {
+      len: 26,
+      width: 100,
+      indexWidth: 60,
+      minWidth: 60,
+    },
+    style: {
+      bgcolor: "#ffffff",
+      align: "left",
+      valign: "middle",
+      textwrap: false,
+      strike: false,
+      underline: false,
+      color: "#0a0a0a",
+      font: {
+        name: "Helvetica",
+        size: 10,
+        bold: false,
+        italic: false,
+      },
+    },
+  };
+  ```
+- Spreadsheet的文档没有更新，本地化需要这样设置:
+  ```js
+  import Spreadsheet from "x-data-spreadsheet";
+  import "x-data-spreadsheet/dist/locale/zh-cn";
+  Spreadsheet.locale("zh-cn", window.x_spreadsheet.$messages["zh-cn"]);
+  ```
