@@ -2,7 +2,7 @@
  * @page: 
  * @Author: Orts
  * @Date: 2021-12-08 12:02:09
- * @LastEditTime: 2021-12-09 15:54:12
+ * @LastEditTime: 2021-12-09 17:58:31
  * @LastEditors: Orts
  * @Description: 
  * @FilePath: /xlsx-in-vue3/src/App.vue
@@ -26,11 +26,9 @@ onMounted(() => {
   loadLocalDemo();
 });
 
-// console.log(require(test))
-
 // ecel默认配置
 const options = {
-  mode: "read", // edit | read 编辑/只读
+  mode: "edit", // edit | read 编辑/只读
   showToolbar: true,
   showGrid: true,
   showContextmenu: true,
